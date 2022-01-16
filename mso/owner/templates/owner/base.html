@@ -1,0 +1,32 @@
+<DOCTYPE! html>
+
+<html>
+	<head>
+		<!-- Page Title -->
+		<title>Manage Store Online</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+		<div class="parent">
+			<div class="inner">
+				<!-- Menu Bar -->
+				<a class="doors" type="button" href="{% url 'owner-cashier' %}">Add Cashier</a>
+				<a class="doors" type="button" href="{% url 'owner-products' %}">Add Products</a>
+				<a class="doors" type="button" href="{% url 'owner-sales' %}">Sales per</a>
+				<a class="doors" type="button" href="{% url 'owner-inventory' %}">Inventory</a>
+				<a class="doors" type="button" href="{% url 'owner-about' %}">About</a>
+				<a class="doors" type="button" href="{% url 'owner-settings' %}">Settings</a>
+				<a class="doors" type="button" href="{% url 'login' %}">Logout</a>
+			</div>
+		</div>
+	</head>
+	<body>
+		<div class="parent">
+			<!-- Body Content -->
+			{% block content %}{% endblock content %}
+		</div>
+	</body>
+	<footer>
+		<!-- Header -->
+		<h1 class="header"> Manage Supermarket Online </h1>
+	</footer>
+</html>

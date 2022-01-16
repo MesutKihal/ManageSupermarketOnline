@@ -1,0 +1,51 @@
+<DOCTYPE! html>
+
+<html>
+	<head>
+		<title>Sign Up</title>
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	</head>
+	<body>
+		{% for message in messages %}
+			<div>
+				{{ message }}
+			</div>
+		{% endfor %}
+		<div class="parent">
+			<div class="child">
+				<form method="post" action="">
+					{% csrf_token %}
+					<h2>SignUp</h2>
+					<div>
+						<label>Username</label>
+					</div>
+					{{form.username}}
+					<div>
+						<label>First Name</label>
+					</div>
+					{{form.firstname}}
+					<div>
+						<label>Last Name</label>
+					</div>
+					{{form.lastname}}
+					<div>
+						<label>Email</label>
+					</div>
+					{{form.email}}
+					<div>
+						<label>Password</label>
+					</div>
+					{{form.password}}
+					<div>
+						<label>Confirm Password</label>
+					</div>
+					{{form.confirm}}
+					<div>
+						<button class="btn" type="submit" name="submit">SignUp</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

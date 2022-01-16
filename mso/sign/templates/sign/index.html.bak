@@ -1,0 +1,35 @@
+<DOCTYPE! html>
+
+<html>
+	<head>
+		<!-- Page Title -->
+		<title>Manage Store Online</title>
+		{% load static %}
+		{% load scss %}
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+		<div class="parent">
+			<!-- Header -->
+			<h1 class="header"> Manage Supermarket Online </h1>
+			<a class="login-btn" href="{% url 'login' %}">Login</a>
+		</div>
+	</head>
+	<body>
+		<div class="parent">
+			<!-- Body Content -->
+			<div class="index-child">
+				<div class="index-div">
+					<img src="{% static 'img/cart.png' %}" alt="cart" width="96" height="96">
+					<p class="index-p">MSO is a web based supermarket management system</p>
+				</div>
+				<div class="index-div">
+					<p class="index-p">It lets you manage your supermarket easily without the use of any desktop software</p>
+					<img src="{% static 'img/computer.png' %}" alt="table" width="96" height="96">
+				</div>
+				<div class="index-div">
+					<img src="{% static 'img/table.png' %}" alt="table" width="96" height="96">
+					<p class="index-p">It gives you a lot of functionality as you can edit, add, delete, and view your products</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

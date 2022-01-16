@@ -1,0 +1,42 @@
+{% extends "owner/base.html" %}
+{% block content %}
+			<div class="child">
+				<form method="post" action="">
+					{% csrf_token %}
+					<!-- Full Name -->
+					<div>
+						<label>Full Name</label>
+					</div>
+					{{form.fullname}}
+					<!-- Address -->
+					<div>
+						<label>Address</label>
+					</div>
+					{{form.address}}
+					<!-- Phone Number -->
+					<div>
+						<label>Phone Number</label>
+					</div>
+					{{form.phone_number}}
+					<!-- Username -->
+					<div>
+						<label>Username</label>
+					</div>
+					{{form.username}}
+					<!-- Email -->
+					<div>
+						<label>Email</label>
+					</div>
+					{{form.email}}
+					<!-- Password -->
+					<div>
+						<label>Password</label>
+					</div>
+					{{form.password}}
+					<div>
+						<input class="btn" type="submit" value="submit"></input>
+					</div>
+				</form>
+			</div>
+
+{% endblock content %}
