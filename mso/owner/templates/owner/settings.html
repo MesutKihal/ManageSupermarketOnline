@@ -1,22 +1,22 @@
 {% extends "owner/base.html" %}
 {% block content %}
-	<div class="parent">
-		<div class="child">
-			<!-- Profile Name -->
-			<div>
-				<label style="font-family:Helvetica;">Admin Name</h2>
-			</div>
-			<input id="entry" name="profile_name" type="text"/>
-			<!-- Email -->
-			<div>
-				<label style="font-family:Helvetica;">Admin Email</h2>
-			</div>
-			<input id="entry" name="email" type="text"/>
-			<!-- Password -->
-			<div>
-				<label style="font-family:Helvetica;">Admin Password</h2>
-			</div>
-			<input id="entry" name="password" type="password"/>
-		</div>
-	</div>
+				<div class="box">
+					<div class="columns is-centered">
+						<h2 class="content has-text-info-dark is-large">Account Settings</h2>
+					</div>
+					<div class="columns is-centered">
+						<h3 style = "color: grey;font-family: consolas;">
+							@{{ request.user }}
+						</h3>
+					</div>
+					<div class="columns is-centered">
+						<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings-username' %}'">Change Username</button>
+					</div>
+					<div class="columns is-centered">
+						<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings-password' %}'">Change Password</button>
+					</div>
+					<div class="columns is-centered">
+						<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings-cashiers' %}'">Manage Cashiers</button>
+					</div>
+				</div>
 {% endblock content%}

@@ -1,0 +1,21 @@
+{% extends "owner/base.html" %}
+{% block content %}
+				<div class="columns is-mobile is-centered">
+					<form class="box" method="post" action="">
+						{% csrf_token %}
+						<div class="columns is-centered">
+							<button class="button has-text-white has-background-info-dark" onclick="location.href ='{% url 'owner-settings' %}'" class="btn">←</button>
+						</div>
+						<!-- Change  Username -->
+						<div class="columns is-centered">
+							<label class="content is-medium">New Username</h2>
+						</div>
+						<div class="columns is-centered">
+							{{form.username}}
+						</div>
+						<div class="columns is-centered">
+							<input class="button has-text-white has-background-info-dark" type="submit" name="Username_Save" value="Save"></input>
+						</div>
+					</form>
+				<div>
+{% endblock content%}

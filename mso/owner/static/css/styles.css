@@ -46,39 +46,15 @@ p{
 }
 
 
-#inventory{
-	font-family: Helvetica;
-	border-collapse: collapse;
-	margin: 6px;
-}
-
-#inventory td{
-	border: 1px solid #ddd;
-	padding: 8px;
-}
-
-#inventory th{
-	border: 1px solid #0492C2;
-	padding: 8px;
-	background-color: #0492C2;
-	color: white;
-}
-
-#inventory tr{
-	background-color: #f2f2f2;
-}
-
-
 #entry{
-	font-familty: Helvetica;
+	font-family: Helvetica;
 	font-size: 100%;
 	text-align: center;
 	background-color: white;
-	
 	margin: 4px;
 }
 #log-entry{
-	font-familty: Helvetica;
+	font-family: Helvetica;
 	font-size: 100%;
 	width: 300px;
 	text-align: center;
@@ -118,7 +94,7 @@ p{
 }
 
 .inner{
-	display: inner-block;
+	display: inline-block;
 	height: 50px;
 	margin-left: auto;
 	margin-right: auto;
@@ -230,6 +206,7 @@ p{
 	border: 1px solid;
 	padding: 4px;
 	width: 100px;
+	margin: 20px;
 	text-decoration: none;
 }
 
@@ -243,13 +220,72 @@ p{
 	border: 1px solid;
 	padding: 4px;
 	width: 100px;
+	margin: 20px;
 	text-decoration: none;
 }
 
 .header{
 	background-color: #0492C2;
 	color: white;
+	border-radius: 6px;
 	font-family: Helvetica;
 	font-size: 250%;
 	text-align: center;
+}
+
+.settings-div{
+	margin: 10px;
+}
+
+.settings-a{
+	font-family: Helvetica;
+	font-size: 120%;
+	font-weight: bold;
+	text-align: center;
+	background-color: #0492C2;
+	color: white;
+	border: 1px solid;
+	padding: 4px;
+	min-width: 150px;
+	max-width: 150px;
+	text-decoration: none;
+}
+
+.settings-a:hover{
+	font-family: Helvetica;
+	font-size: 120%;
+	font-weight: bold;
+	text-align: center;
+	background-color: white;
+	color: #0492C2;
+	border: 1px solid;
+	padding: 4px;
+	min-width: 150px;
+	max-width: 150px;
+	text-decoration: none;
+}
+
+.tbl{
+	border-collapse: collapse;
+	width: 400px;
+	margin: 10px;
+	border: 1px solid;
+}
+
+.tbl th{
+	background-color: #0492C2;
+	color: white;
+	height: 50px;
+	padding: 5px;
+}
+
+.tbl tr{
+	height: 50px;
+	padding: 5px;
+}
+
+.tbl tr:hover{
+	background-color: #eee;
+	height: 50px;
+	padding: 5px;
 }

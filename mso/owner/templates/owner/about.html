@@ -1,14 +1,26 @@
 
 {% extends "owner/base.html" %}
 {% block content %}
-	<div class="parent">
-		<div class="child">
-			<h2>Title</h2>
-			<p>Manage Supermarket Online</p>
-			<h2>Contributors</h2>
-			<a style="text-decoration: none;" href="https:\\www.github.com/MesutKihal">Messaoud Kihal</a>
-			<h2>Description</h2>
-			<p>Manage supermarket online is a web app that allows the user to manage his/her supermarket online easily without using the help of any desktop software.</p>
-		</div>	
+	<div class="box">
+		<div style="display: flex;flex-direction: column;">
+			<div class="columns is-centered">
+				<h2 class="content has-text-info-dark is-large">Title</h2>
+			</div>
+			<div class="columns is-centered">
+				<p class="content is-size-6">Manage Supermarket Online</p>
+			</div>	
+			<div class="columns is-centered">
+				<h2 class="content has-text-info-dark is-large">Contributors</h2>
+			</div>
+			<div class="columns is-centered">
+				<a class="tag is-tag is-light has-text-info-dark" href="https:\\www.github.com/MesutKihal">Messaoud Kihal</a>
+			</div>
+			<div class="columns is-centered">
+				<h2 class="content has-text-info-dark is-large">Description</h2>
+			</div>
+			<div class="columns is-centered">
+				<p class="content is-size-6">Manage supermarket online is a web app that allows the user to manage his/her supermarket online easily without using the help of any desktop software.</p>
+			</div>	
+		</div>
 	</div>
 {% endblock content%}

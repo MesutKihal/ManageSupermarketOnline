@@ -1,10 +1,16 @@
 <DOCTYPE! html>
 
-<html>
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Include the Bulma CSS framework for styling -->
+		<link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+		<!-- Page Title -->
 		<title>Login</title>
-		{% load static %}
-		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 	</head>
 	<body>
 		{% for message in messages %}
@@ -12,25 +18,32 @@
 				{{ message }}
 			</div>
 		{% endfor %}
-		<div class="parent">
-			<div class="child">
-				<form method="post" action="{% url 'login' %} ">
+		<div class="columns is-mobile is-centered">
+			<div class="column is-half">
+				<form class="box" method="post" action="{% url 'login' %} ">
 					{% csrf_token %}
-					<h2>Login</h2>
-					<div>
-						<label>Username</label>
+					<div class="columns is-centered">
+						<button class="button has-text-white has-background-info-dark" onclick="location.href ='{% url 'index' %}'">←</button>
 					</div>
-					{{form.username}}
-					<div>
-						<label>Password</label>
+					<div class="columns is-centered">
+						<label class="content is-medium">Username</label>
 					</div>
-					{{form.password}}
-					<div>
-						<button class="btn" type="submit">Login</button>
+					<div class="columns is-centered">
+						{{form.username}}
+					</div>
+					<div class="columns is-centered">
+						<label class="content is-medium">Password</label>
+					</div>
+					<div class="columns is-centered">
+						{{form.password}}
+					</div>
+					<div class="columns is-centered">
+						<button class="button has-text-white has-background-info-dark" type="submit">Login</button>
 					</div>
 				</form>
-				<p>Don't have an account?</p>
-				<a class="btn" href="{% url 'signup' %}">Sign Up</a>
+				<div class="columns is-centered">
+					<a class="tag is-link is-light" href="{% url 'signup' %}">Don't have an account?</a>
+				</div>
 			</div>
 		</div>
 	</body>

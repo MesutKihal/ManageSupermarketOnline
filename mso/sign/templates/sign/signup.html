@@ -2,9 +2,15 @@
 
 <html>
 	<head>
-		<title>Sign Up</title>
-		{% load static %}
-		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Include the Bulma CSS framework for styling -->
+		<link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+		<!-- Page Title -->
+		<title>SignUp</title>
+
 	</head>
 	<body>
 		{% for message in messages %}
@@ -12,39 +18,58 @@
 				{{ message }}
 			</div>
 		{% endfor %}
-		<div class="parent">
-			<div class="child">
-				<form method="post" action="">
+		<div class="columns is-mobile is-centered">
+			<div class="column is-half">
+				<form class="box" method="post" action="">
 					{% csrf_token %}
-					<h2>SignUp</h2>
-					<div>
-						<label>Username</label>
-					</div>
-					{{form.username}}
-					<div>
-						<label>First Name</label>
-					</div>
-					{{form.firstname}}
-					<div>
-						<label>Last Name</label>
-					</div>
-					{{form.lastname}}
-					<div>
-						<label>Email</label>
-					</div>
-					{{form.email}}
-					<div>
-						<label>Password</label>
-					</div>
-					{{form.password}}
-					<div>
-						<label>Confirm Password</label>
-					</div>
-					{{form.confirm}}
-					<div>
-						<button class="btn" type="submit" name="submit">SignUp</button>
+					<div style="display: flex;flex-direction: column;">
+						<div class="columns is-centered">
+							<button class="button has-text-white has-background-info-dark" onclick="location.href ='{% url 'login' %}'">←</button>
+						</div>
+						<div class="columns is-centered">
+							<label class="content is-medium">Username</label>
+						</div>
+						<div class="columns is-centered">
+							{{form.username}}
+						</div>
+						<div class="columns is-centered">
+							<label class="content is-medium">First Name</label>
+						</div>
+						<div class="columns is-centered">
+							{{form.firstname}}
+						</div>
+						<div class="columns is-centered">
+							<label class="content is-medium">Last Name</label>
+						</div>
+						<div class="columns is-centered">
+							{{form.lastname}}
+						</div>
+						<div class="columns is-centered">
+							<label class="content is-medium">Email</label>
+						</div>
+						<div class="columns is-centered">
+							{{form.email}}
+						</div>
+						<div class="columns is-centered">
+							<label class="content is-medium">Password</label>
+						</div>
+						<div class="columns is-centered">
+							{{form.password}}
+						</div>
+						<div class="columns is-centered">
+							<label class="content is-medium">Confirm Password</label>
+						</div>
+						<div class="columns is-centered">
+							{{form.confirm}}
+						</div>
+						<div class="columns is-centered">
+							<button class="button has-text-white has-background-info-dark" type="submit" name="submit">SignUp</button>
+						</div>
 					</div>
 				</form>
+				<div class="columns is-centered">
+					<a class="tag is-link is-light"href="{% url 'login' %}">I already have an account</a>
+				</div>
 			</div>
 		</div>
 	</body>

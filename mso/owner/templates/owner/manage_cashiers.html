@@ -1,0 +1,32 @@
+{% extends "owner/base.html" %}
+{% block content %}
+	<div class="columns is-centered">
+		<h2 class="content has-text-info-dark is-large">Manage Cashiers</h2>
+	</div>
+	<div class="columns is-mobile is-centered">
+		<table class="table is-hoverable">
+			<tr class="tr margin-medium">
+				<th class="th has-text-white has-background-info-dark">FULL NAME</th>
+				<th class="th has-text-white has-background-info-dark">USERNAME</th>
+				<th class="th has-text-white has-background-info-dark">EMAIL</th>
+				<th class="th has-text-white has-background-info-dark"></th>
+			</tr>
+			{% for cashier in cashiers %}
+				<tr>
+					<td class="td">{{ cashier.fullname }}</td>
+					<td class="td">{{ cashier.username }}</td>
+					<td class="td">{{ cashier.email }}</td>
+					<td class="td"><button class="button has-text-white has-background-danger">X</button></td>
+				</tr>
+			{% endfor %}
+			<tr class="tr">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="td">
+					<button class="button has-text-white has-background-success">+</button>
+				</td>
+			<tr>
+	</div>
+	
+{% endblock content%}

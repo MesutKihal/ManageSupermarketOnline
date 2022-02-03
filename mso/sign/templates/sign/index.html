@@ -1,32 +1,38 @@
 <DOCTYPE! html>
 
-<html>
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Include the Bulma CSS framework for styling -->
+		<link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 		<!-- Page Title -->
 		<title>Manage Store Online</title>
-		{% load static %}
-		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-		<div class="parent">
-			<!-- Header -->
-			<h1 class="header"> Manage Supermarket Online </h1>
-			<a class="login-btn" href="{% url 'login' %}">Login</a>
-		</div>
+		
 	</head>
 	<body>
-		<div class="parent">
+		<section class="hero is-small is-success mb-4">
+			<div class="hero-body has-background-info-dark">
+				<h1 class="title is-1">Manage Supermarket Online</h1>
+				<p class="subtitle is-4">
+					A web based supermarket management system.
+				</p>
+				<button class="button has-text-info-dark has-background-white" onclick="location.href = '{% url 'login' %}'">Login</button>
+			</div>
+		</section>
+		<div class="container">
+			{% load static %}
 			<!-- Body Content -->
-			<div class="index-child">
-				<div class="index-div">
+			<div class="block">
+				<div style="display: float;">
 					<img src="{% static 'img/cart.png' %}" alt="cart" width="96" height="96">
-					<p class="index-p">MSO is a web based supermarket management system</p>
-				</div>
-				<div class="index-div">
-					<p class="index-p">It lets you manage your supermarket easily without the use of any desktop software</p>
+					<p class="content">Manage Supermarket Online is a web based supermarket management system</p>
 					<img src="{% static 'img/computer.png' %}" alt="table" width="96" height="96">
-				</div>
-				<div class="index-div">
+					<p class="content">It lets you manage your supermarket easily without the use of any desktop software</p>
 					<img src="{% static 'img/table.png' %}" alt="table" width="96" height="96">
-					<p class="index-p">It gives you a lot of functionality as you can edit, add, delete, and view your products</p>
+					<p class="content">It gives you a lot of functionality as you can edit, add, delete, and view your products</p>
 				</div>
 			</div>
 		</div>

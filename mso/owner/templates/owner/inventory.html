@@ -1,31 +1,39 @@
 {% extends "owner/base.html" %}
 {% block content %}
-	<div class="parent">
-		<div class="child">
-			<div>
-				<h2 style="font-family:Helvetica;">Inventory</h2>
-			</div>
-			<input id="log-entry" name="Search" type="text"/>
-			<button class="btn">Search</button>
-			<table id="inventory">
-				<tr id="inventory">
-					<th id="inventory">BARCODE</th>
-					<th id="inventory">TITLE</th>
-					<th id="inventory">TYPE</th>
-					<th id="inventory">PRICE</th>
-					<th id="inventory">IN STOCK</th>
-				</tr>
-				{% for product in products %}
-					<tr id="inventory">
-						<td id="inventory">{{ product.barcode }}</td>
-						<td id="inventory">{{ product.title }}</td>
-						<td id="inventory">{{ product.type }}</td>
-						<td id="inventory">{{ product.price }}</td>
-						<td id="inventory">{{ product.quantity }}</td>
-					</tr>
-				{% endfor %}
-			</table>
-		</div>
+	<div class="columns is-mobile is-centered">
+		<p class="content has-text-info-dark is-large">Inventory</p>
+	</div>
+	<div class="columns is-mobile is-centered">
+		<table class="table is-hoverable">
+			<tr class="tr mg-medium">
+				<th class="th has-text-white has-background-info-dark">BARCODE</th>
+				<th class="th has-text-white has-background-info-dark">TITLE</th>
+				<th class="th has-text-white has-background-info-dark">TYPE</th>
+				<th class="th has-text-white has-background-info-dark">PRICE</th>
+				<th class="th has-text-white has-background-info-dark">IN STOCK</th>
+				<th class="th has-text-white has-background-info-dark"></th>
+			</tr>
+		{% for product in products %}
+			<tr class="tr">
+				<td class="td">{{ product.barcode }}</td>
+				<td class="td">{{ product.title }}</td>
+				<td class="td">{{ product.type }}</td>
+				<td class="td">{{ product.price }}</td>
+				<td class="td">{{ product.quantity }}</td>
+				<td class="td"><button class="button has-text-white has-background-danger">X</button></td>
+			</tr>
+		{% endfor %}
+		<tr class="tr">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td class="td">
+				<button class="button has-text-white has-background-success">+</button>
+			</td>
+		<tr>
+		</table>
 	</div>
 
 {% endblock content%}

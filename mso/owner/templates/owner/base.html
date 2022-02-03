@@ -1,32 +1,44 @@
 <DOCTYPE! html>
 
-<html>
-	<head>
-		<!-- Page Title -->
-		<title>Manage Store Online</title>
-		{% load static %}
-		<link rel="stylesheet" href="{% static 'css/styles.css' %}">
-		<div class="parent">
-			<div class="inner">
-				<!-- Menu Bar -->
-				<a class="doors" type="button" href="{% url 'owner-cashier' %}">Add Cashier</a>
-				<a class="doors" type="button" href="{% url 'owner-products' %}">Add Products</a>
-				<a class="doors" type="button" href="{% url 'owner-sales' %}">Sales per</a>
-				<a class="doors" type="button" href="{% url 'owner-inventory' %}">Inventory</a>
-				<a class="doors" type="button" href="{% url 'owner-about' %}">About</a>
-				<a class="doors" type="button" href="{% url 'owner-settings' %}">Settings</a>
-				<a class="doors" type="button" href="{% url 'login' %}">Logout</a>
-			</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include the Bulma CSS framework for styling -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+	<!-- Page Title -->
+    <title>Manage Supermarket Online</title>
+</head>
+<body>
+    <section class="hero is-small is-success mb-4">
+        <div class="hero-body has-background-info-dark">
+            <h1 class="title is-1">Manage Supermarket Online</h1>
+            <p class="subtitle is-4">
+                A web based supermarket management system.
+            </p>
+        </div>
+    </section>
+	<div class="columns is-centered">
+		<div class="columns">
+		<!-- Menu Bar -->
+			<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-cashier' %}'">Add Cashier</button>
+			<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-products' %}'">Add Products</button>
+			<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-sales' %}'">Sales per</button>
+			<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-inventory' %}'">Inventory</button>
+			<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-about' %}'">About</button>
+			<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings' %}'">Settings</button>
+			<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'login' %}'">Logout</button>
 		</div>
-	</head>
-	<body>
-		<div class="parent">
-			<!-- Body Content -->
-			{% block content %}{% endblock content %}
+	</div>
+	{% load static %}
+    <div class="section">
+		<div class="container">
+			{% block content %}
+
+			{% endblock content %}	
 		</div>
-	</body>
-	<footer>
-		<!-- Header -->
-		<h1 class="header"> Manage Supermarket Online </h1>
-	</footer>
+    </div>
+</body>
 </html>
