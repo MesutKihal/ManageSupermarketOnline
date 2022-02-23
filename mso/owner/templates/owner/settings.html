@@ -10,13 +10,21 @@
 						</h3>
 					</div>
 					<div class="columns is-centered">
-						<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings-username' %}'">Change Username</button>
-					</div>
-					<div class="columns is-centered">
-						<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings-password' %}'">Change Password</button>
-					</div>
-					<div class="columns is-centered">
-						<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings-cashiers' %}'">Manage Cashiers</button>
+						<div class="column is-one-quarter">
+							<div class="rows">
+								<div class="row">
+									<button class="button has-text-black has-background-white" onclick="location.href = '{% url 'owner-settings-username' %}'">Change Username</button>
+								</div>
+								<div class="row">
+									<button class="button has-text-black has-background-white" onclick="location.href = '{% url 'owner-settings-password' %}'">Change Password</button>
+								</div>
+								<div class="row">
+									<button class="button has-text-black has-background-white" onclick="location.href = '{% url 'owner-settings-cashiers' %}'">Manage Cashiers</button>
+								</div>
+							</div>
+						</div>
+						<div class="column is-three-quarters">
+						</div>
 					</div>
 				</div>
 {% endblock content%}

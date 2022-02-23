@@ -13,13 +13,10 @@
 </head>
 <body>
     <section class="hero is-small is-success mb-4">
-		<div class="hero-body has-background-info-dark">
+        <div class="hero-body has-background-info-dark">
 			<div class="columns is-centered">
 				<div class="column is-three-quarters">
-					<h1 class="title is-1">Manage Supermarket Online</h1>
-					<p class="subtitle is-4">
-						A web based supermarket management system.
-					</p>
+					<h1 class="title is-1">Cash Register</h1>
 				</div>
 				<div class="column is-one-quarter">
 					<figure class="image is-128x128 is-half">
@@ -28,19 +25,8 @@
 					</figure>
 				</div>
 			</div>
-			<div class="columns is-centered">
-				<div class="column">
-				<!-- Menu Bar -->
-					<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-cashier' %}'">Add Cashier</button>
-					<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-products' %}'">Add Products</button>
-					<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-sales' %}'">Sales per</button>
-					<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-inventory' %}'">Inventory</button>
-					<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-about' %}'">About</button>
-					<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'owner-settings' %}'">Settings</button>
-					<button class="button has-text-white has-background-info-dark" onclick="location.href = '{% url 'logout' %}'">Logout</button>
-				</div>
-			</div>
         </div>
+		<button class="button has-text-white has-background-info-dark" onclick="">Logout</button>
     </section>
 	{% for message in messages %}
 		
@@ -63,15 +49,13 @@
 				</p>
 			</article>
 		{% endif %}
-		
 	{% endfor %}
-	{% load static %}
-    <div class="section">
+	<section class="section">
 		<div class="container">
 			{% block content %}
-
-			{% endblock content %}	
+			
+			{% endblock content %}
 		</div>
-    </div>
+	</section>
 </body>
 </html>

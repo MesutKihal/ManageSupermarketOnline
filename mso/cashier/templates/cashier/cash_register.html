@@ -1,0 +1,91 @@
+{% extends "cashier/base.html" %}
+{% block content %}
+	<div class="columns is-centered">
+		<div class="column">
+			<div class="columns is-centered">
+				<div class="column is-half">
+					<p class="content is-size-6 has-text-black ml-4">Search product by title or scan barcode<p>
+					<div class="columns">
+						<input class="input mb-4 mr-4 ml-4"></input>
+						<button class="button has-text-white has-background-info-dark ml-4 mr-4" onclick="">Submit</button>
+					</div>
+					<table class="table is-hoverable">
+						<tr class="tr mg-medium">
+							<th class="th has-text-white has-background-info-dark">title</th>
+							<th class="th has-text-white has-background-info-dark">quantity</th>
+							<th class="th has-text-white has-background-info-dark">price</th>
+							<th class="th has-text-white has-background-info-dark">discount %</th>
+							<th class="th has-text-white has-background-info-dark">delete</th>
+						</tr>
+						<tr class="tr">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="td">
+								<button class="button has-text-white has-background-danger">x</button>
+							</td>
+						<tr>
+					</table>
+				</div>
+				<div class="column is-half" style="background-color: #F5F5F5;">
+					<div class="rows">
+						<p class="content is-size-6 has-text-black ml-4 mb-4">Enter Costumer's id</p>
+					</div>
+					<div class="columns">
+						<input class="input mb-4 mr-4 ml-4"></input>
+						<button class="button has-text-white has-background-info-dark ml-4 mr-4">Submit</button>
+					</div>
+					<div class="rows">
+						<p class="content is-size-7 has-text-info-dark ml-4 mb-4 mt-4">@AnonymousCostumer</p>
+					</div>
+					<p class="content is-size-6 is-italic has-text-black ml-4">* Note: If no costumer is added the bill will be registered by the name of AnonymousCostumer.</p>
+					<section class="section">
+						<div class="columns is-centered">
+							<table class="table">
+								<tr class="tr">
+									<td class="td has-background-info-dark has-text-white">Sub Total:</td>
+									<td class="td is-size-3">0.0$</td>
+								</tr>
+								<tr class="tr">
+									<td class="td has-background-info-dark has-text-white">Discounts:</td>
+									<td class="td has-text-danger is-size-3">0.0$</td>
+								</tr>
+								<tr class="tr">
+									<td class="td has-background-info-dark has-text-white">Total:</td>
+									<td class="td has-text-black is-size-3">0.0$</td>
+								</tr>
+							</table>
+						</div>
+					</section>
+					<section class="hero mb-4">
+						<div class="block">
+							<div class="columns is-centered">
+								<div class="column is-half">
+									<div class="rows">
+										<div class="row">
+											<button class="button has-text-white has-background-info-dark is-size-6 is-fullwidth">Print Bill</button>
+										</div>
+										<div class="row">
+											<button class="button has-text-white has-background-info-dark is-size-6 is-fullwidth">Send Email</button>
+										</div>
+									</div>
+								</div>
+								<div class="column is-half">
+									<div class="rows">
+										<div class="row">
+											<button class="button has-text-white has-background-info-dark is-size-6 is-fullwidth">Clear</button>
+										</div>
+										<div class="row">
+											<button class="button has-text-white has-background-info-dark is-size-6 is-fullwidth">Undo</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}

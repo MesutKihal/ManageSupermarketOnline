@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('sign.urls')),
     path('owner/', include('owner.urls')),
+    path('cashier/', include('cashier.urls')),
 ]

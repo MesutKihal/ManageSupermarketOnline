@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'owner.apps.OwnerConfig',
     'sign.apps.SignConfig',
+    'cashier.apps.CashierConfig',
 ]
 
 MIDDLEWARE = [
